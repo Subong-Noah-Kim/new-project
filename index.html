@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스네이크 게임</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="titlebar">
+        <p class="eyebrow">CLASSIC ARCADE</p>
+        <h1>스네이크 게임</h1>
+      </header>
+
+      <section class="hud" aria-label="게임 상태">
+        <article class="stat">
+          <p class="stat-label">점수</p>
+          <p class="stat-value"><span data-score>0</span></p>
+        </article>
+        <article class="stat">
+          <p class="stat-label">상태</p>
+          <p class="stat-value"><span data-status>진행 중</span></p>
+        </article>
+      </section>
+
+      <section class="toolbar" aria-label="게임 조작">
+        <div class="actions">
+          <button type="button" data-pause>일시정지</button>
+          <button type="button" data-restart>다시 시작</button>
+        </div>
+
+        <div class="speed" aria-label="속도 조절">
+          <p class="speed-text">속도 <span data-speed-label>3</span>단계</p>
+          <div class="speed-buttons">
+            <button type="button" data-speed="1">1</button>
+            <button type="button" data-speed="2">2</button>
+            <button type="button" data-speed="3">3</button>
+            <button type="button" data-speed="4">4</button>
+            <button type="button" data-speed="5">5</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="board">
+        <section
+          class="grid"
+          data-grid
+          role="grid"
+          aria-label="스네이크 게임 격자"
+        ></section>
+      </section>
+
+      <section class="controls" aria-label="터치 조작">
+        <button type="button" data-dir="up">위</button>
+        <div class="row">
+          <button type="button" data-dir="left">왼쪽</button>
+          <button type="button" data-dir="down">아래</button>
+          <button type="button" data-dir="right">오른쪽</button>
+        </div>
+      </section>
+
+      <p class="help">방향키 또는 WASD로 이동 • Space: 일시정지/재개 • R: 다시 시작</p>
+    </main>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
